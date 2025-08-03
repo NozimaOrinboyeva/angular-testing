@@ -23,7 +23,7 @@ describe('Counter Component', () => {
   });
 
   it('should increment count by 1', () => {
-    component.increment();
+    component.onIncrement();
     expect(component.count).toBe(1);
   });
 
@@ -31,7 +31,7 @@ describe('Counter Component', () => {
     expect(component).toBeTruthy();
   })
   it('should decrement count by 1', () => {
-    component.decrement();
+    component.onDecrement();
     expect(component.count).toBe(-1);
   });
 });
