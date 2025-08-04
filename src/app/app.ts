@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Counter } from './counter/counter';
+import { Parent } from './parent/parent';
 
 @Component({
   selector: 'app-root',
-  imports: [Counter],
+  imports: [Parent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
