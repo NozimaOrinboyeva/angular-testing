@@ -32,15 +32,15 @@ describe('Login', () => {
     spyOn(console, 'log');
   
     component.loginForm.setValue({
-      email: 'john@gmail.com',
+      username: 'john@gmail.com',
       password: '123456',
     });
   
     const formEL = fixture.debugElement.query(By.css('form'));
-    formEL.triggerEventHandler('ngSubmit', null);
+    formEL.triggerEventHandler('ngSubmit', component.loginForm.value);
   
     expect(console.log).toHaveBeenCalledWith('Form Submitted!', {
-      email: 'john@gmail.com',
+      username: 'john@gmail.com',
       password: '123456',
     });
   });
